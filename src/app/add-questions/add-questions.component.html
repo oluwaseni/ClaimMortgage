@@ -1,0 +1,23 @@
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)" class="row">
+        <div class="form-group col-sm-6 input-group">
+            <textarea placeholder="Write the Question here..." id="" cols="90" name="question"
+            #question="ngModel" [(ngModel)]="service.formData.question" required rows="10"
+             class=" ml-1 pl-2"></textarea>
+        </div>
+        <div class="form-group col-sm-6 input-group">
+            <textarea placeholder="Include the expected answers here; either separating with coma or space..." name="expected"
+            #questions="ngModel" [(ngModel)]="service.formData.expected" required rows="10"
+            id="" cols="85" rows="8" class=" ml-1 pl-2"></textarea>
+        
+        <!-- <span style="color: #f7471b">Note:</span> Once you submit, you can't come back to edit. -->
+        <!-- <input type="button" value="Add Question" class="form-group btn myButton pl-3 pr-3" > -->
+        <button type="submit" [disabled]="form.invalid" class="btn myButton pl-3 pr-3" >
+            Add Question</button>
+        </div>
+    </form>
+<div>
+    <div class="card p-3 m-1" *ngFor="let quest of service.list">
+        <span><b style="color: #f7471b">Question</b> {{quest.id}}</span>
+        <p>{{quest.question}}</p>
+    </div>
+</div>

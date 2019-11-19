@@ -1,0 +1,31 @@
+<p>properties works!</p>
+
+
+<table class="table table-hover table-bordered table-striped text-center">
+    <thead>
+        <tr>
+            <th>S/N</th>
+            <th>Owner's Name</th>
+            <th>Property type</th>
+            <th>Mortgaged Bank</th>
+            <th>Nature of Deeds</th>
+            <th>Number</th>
+            <th>Percentage</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let property of service.list"  (click)="getProperty(property.propertyId)">
+        <!-- <td (click)="populateForm(pd)">{{pd.Username}}</td> -->
+        <td (click)="populateForm(property.propertyId)">{{property.propertyId}}</td>
+        <td>{{property.landOwnerName}}</td>
+        <td>{{property.propertyType}}</td>
+        <td>{{property.bankMortgaging}}</td>
+        <td>{{property.natureOfDeeds}}</td>
+        <td>{{property.number}}</td>
+        <td>{{property.percentageMortgaged}} %</td>
+        <td>
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(pd.CardId)"></i>
+        </td>
+    </tr>
+    </tbody>
+</table>

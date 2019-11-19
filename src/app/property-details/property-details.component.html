@@ -1,0 +1,141 @@
+<div class="container justify-content-center pt-4 pb-4" style="background-color: #ffffff">
+
+  <div class="row pt-3 pb-3"  *ngIf="info">
+          <div class="col-sm-7">
+            <div class="">
+              <!-- <div class="card-header">Account Details <span>Edit</span><i class="fa float-right fas fa-ellipsis-v"></i></div> -->
+              <div class="card-body">
+                  <!-- <img src="assets/logo/logo.png" width="100px" height="100px" style="border-radius: 50px;"/> -->
+                <!-- <i class="fa fa-fw fa-home" style="font-size: 210%; color: #ffcc00"></i> -->
+                <div   style="border-radius: 50px; 
+                background-color: #ffffff;
+                 width:100px ;
+                 height:100px;
+                 border: solid #172556 2px;
+                 " >
+                <span 
+                style="color:#172556; 
+                font-size: 250%; 
+                text-align: center;
+                 padding-left: 30px;
+                  padding-top: 50px;">IO</span>
+              </div>
+                <br>
+                  <div class="card-title"><b>{{info.landOwnerName}}</b></div>
+                  
+                <!-- <div class="progress" style="height:5px">
+                   <div class="progress-bar bg-warning" style="width:40%; color:#172556"></div>
+                </div> -->
+              </div>  
+              <!-- <div class="card-footer">And counting</div> -->
+            </div>
+          </div>
+          <div class="col-sm-5">
+
+
+           
+                <!-- <h1>File Upload Using Angular 7 and ASP.NET Core Web API</h1> -->
+                <input #file type="file"  #file placeholder="Choose file"  class="btn-lg btn-submit" multiple (change)="uploading(file.files)" style="display:none;"/>
+                <button type="button" class="btn btn-success mb-3" (click)="file.click()">Upload C of O Docs</button><br>
+                <input #file type="file"  #file placeholder="Choose file"  class="btn-lg btn-submit" multiple (change)="uploading(file.files)" style="display:none;"/>
+                <button type="button" class="btn btn-success mb-3" (click)="file.click()">Upload Deeds of Mortgage FIles</button><br>
+                <input #file type="file"  #file placeholder="Choose file"  class="btn-lg btn-submit" multiple (change)="uploading(file.files)" style="display:none;"/>
+                <button type="button" class="btn btn-success mb-3" (click)="file.click()">Upload Governor's Consent File</button><br>
+
+                <!-- <button type="submit" class="btn-lg btn-submit"> Submit </button> -->
+                <!-- <div class="col-md-3">
+                  <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+                  <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+                </div> -->
+      
+                <br />
+                <span style="font-weight:bold;color:green;" *ngIf="progress > 0 && progress < 100">
+                  {{progress}}%
+                </span>
+                <span style="font-weight:bold;color:green;" *ngIf="message">
+                  {{message}}
+                </span>
+            </div>
+      
+        
+  </div>
+<div class="row pt-3 pb-3"  *ngIf="info">
+<div class="col-sm-6">
+<div class="card">
+  <div class="card-header">Account Details<i class="fa float-right fas fa-ellipsis-v"></i></div>
+  <div class="card-body">
+    <i class="fa fa-fw fa-home" style="font-size: 210%; color: #ffcc00"></i>
+    <br>
+      <div class="card-title"><b> {{info.landOwnerName}}</b></div>
+      <div class="card-text">
+              <ul>
+                <li>Name: {{info.landOwnerName}}</li>
+                <li>Property Type: {{info.propertyType}}</li>
+                <li>Bank Mortgage: {{info.bankMortgaging}}</li>
+             </ul>
+      </div>
+    <!-- <div class="progress" style="height:5px">
+      <div class="progress-bar bg-warning" style="width:40%; color:#172556"></div>
+    </div> -->
+  </div>
+  <!-- <div class="card-footer">And counting</div> -->
+</div>
+</div>
+
+<div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">Address <i class="fa float-right fas fa-ellipsis-v"></i></div>
+        <div class="card-body">
+          <i class="fa fa-fw fa-address-card-o" style="font-size: 210%; color: #ffcc00"></i>
+          <br>
+            <div class="card-title"><b>Your default shipping address</b></div>
+            <div class="card-text">
+                      <ul>
+                        <li>Name: {{info.landOwnerName}}</li>
+                        <li>Property Type: {{info.propertyType}}</li>
+                        <li>Bank Mortgage: {{info.bankMortgaging}}</li>
+                     </ul>
+            </div>
+          <!-- <div class="progress" style="height:5px">
+            <div class="progress-bar bg-warning" style="width:40%"></div>
+          </div> -->
+        </div>
+        <!-- <div class="card-footer">And counting</div> -->
+      </div>
+    </div>
+
+
+
+</div>
+
+</div>
+
+
+
+<!-- 
+<div>
+  <div class="row" *ngIf="info">
+    <div class="col-sm-5">
+      <ul>
+        <li>Name: {{info.landOwnerName}}</li>
+        <li>Property Type: {{info.propertyType}}</li>
+        <li>Bank Mortgage: {{info.bankMortgaging}}</li>
+        <li>Bank Mortgage: </li>
+      </ul>
+    </div>
+    <div class="col-sm-7">
+ -->
+
+      <!-- <div> -->
+          <!-- <h1>File Upload Using Angular 7 and ASP.NET Core Web API</h1> -->
+          <!-- <input #file type="file" class="btn-lg btn-submit" multiple (change)="uploading(file.files)" /> -->
+          <!-- <button type="submit" class="btn-lg btn-submit"> Submit </button> -->
+<!-- 
+          <br />
+          <span style="font-weight:bold;color:green;" *ngIf="progress > 0 && progress < 100">
+            {{progress}}%
+          </span>
+          <span style="font-weight:bold;color:green;" *ngIf="message">
+            {{message}}
+          </span>
+      </div> -->

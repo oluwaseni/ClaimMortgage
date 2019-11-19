@@ -1,0 +1,160 @@
+
+        <router-outlet><router-outlet>
+  
+        
+
+            
+<div style="max-width: 600px; margin:auto; background-color: #ffffff;" class="p-4">
+    <form #form="ngForm" autocomplete="off" (submit)="onSubmits(form)">
+    
+        <!-- <input type="hidden" name="CardId" [value]="service.formData.CardId"> -->
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="LandOwnerName.valid" [class.red-icon]="LandOwnerName.invalid &&LandOwnerName.touched"></i>
+                    </div>
+                </div>
+                <input name="LandOwnerName" type="text" #LandOwnerName="ngModel" [(ngModel)]="service.formData.LandOwnerName"
+            class="form-control" id="first" placeholder="Land Owner Name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="PropertyType.valid" [class.red-icon]="PropertyType.invalid &&PropertyType.touched"></i>
+                    </div>
+                </div>
+                <input name="PropertyType" type="text" #PropertyType="ngModel" [(ngModel)]="service.formData.PropertyType"
+            class="form-control" id="first" placeholder="Property Type" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="PercentageMortgaged.valid" [class.red-icon]="PercentageMortgaged.invalid &&PercentageMortgaged.touched"></i>
+                    </div>
+                </div>
+                <input name="PercentageMortgaged" type="text" #PercentageMortgaged="ngModel" [(ngModel)]="service.formData.PercentageMortgaged"
+            class="form-control" id="first" placeholder="Percentage %" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="BankMortgaging.valid" [class.red-icon]="BankMortgaging.invalid &&BankMortgaging.touched"></i>
+                    </div>
+                </div>
+                <input name="BankMortgaging" type="text" #BankMortgaging="ngModel" [(ngModel)]="service.formData.BankMortgaging"
+            class="form-control" id="first" placeholder="Bank" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="NatureOfDeeds.valid" [class.red-icon]="NatureOfDeeds.invalid &&NatureOfDeeds.touched"></i>
+                    </div>
+                </div>
+                <input name="NatureOfDeeds" type="text" #NatureOfDeeds="ngModel" [(ngModel)]="service.formData.NatureOfDeeds"
+            class="form-control" id="first" placeholder="Nature of Deeds" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="Registered.valid" [class.red-icon]="Registered.invalid &&Registered.touched"></i>
+                    </div>
+                </div>
+                <input name="Registered" type="text" #Registered="ngModel" [(ngModel)]="service.formData.Registered"
+            class="form-control" id="first" placeholder="Registered?" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="Volume.valid" [class.red-icon]="Volume.invalid &&Volume.touched"></i>
+                    </div>
+                </div>
+                <input name="Volume" type="text" #Volume="ngModel" [(ngModel)]="service.formData.Volume"
+            class="form-control" id="first" placeholder="Volume" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="Number.valid" [class.red-icon]="Number.invalid &&Number.touched"></i>
+                    </div>
+                </div>
+                <input name="Number" type="text" #Number="ngModel" [(ngModel)]="service.formData.Number"
+            class="form-control" id="first" placeholder="Number" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="Page.valid" [class.red-icon]="Page.invalid &&Page.touched"></i>
+                    </div>
+                </div>
+                <input name="Page" type="text" #Page="ngModel" [(ngModel)]="service.formData.Page"
+            class="form-control" id="first" placeholder="Page" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="PlanNumber.valid" [class.red-icon]="PlanNumber.invalid &&PlanNumber.touched"></i>
+                    </div>
+                </div>
+                <input name="PlanNumber" type="text" #PlanNumber="ngModel" [(ngModel)]="service.formData.PlanNumber"
+            class="form-control" id="first" placeholder="Plan Number" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="ReceiptNumber.valid" [class.red-icon]="ReceiptNumber.invalid &&ReceiptNumber.touched"></i>
+                    </div>
+                </div>
+                <input name="ReceiptNumber" type="text" #ReceiptNumber="ngModel" [(ngModel)]="service.formData.ReceiptNumber"
+            class="form-control" id="first" placeholder="Receipt Number" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="FileReference.valid" [class.red-icon]="FileReference.invalid &&FileReference.touched"></i>
+                    </div>
+                </div>
+                <input name="FileReference" type="text" #FileReference="ngModel" [(ngModel)]="service.formData.FileReference"
+            class="form-control" id="first" placeholder="File Reference" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                        <i class="fas fa-user-circle" [class.green-icon]="SerialNumber.valid" [class.red-icon]="SerialNumber.invalid &&SerialNumber.touched"></i>
+                    </div>
+                </div>
+                <input name="SerialNumber" type="text" #SerialNumber="ngModel" [(ngModel)]="service.formData.SerialNumber"
+            class="form-control" id="first" placeholder="Serial Number" required>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid"><i class="fas fa-database "> Submit</i></button>
+        </div>
+    </form>
+    
+    </div>
