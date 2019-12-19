@@ -25,9 +25,9 @@ import { PropertiesComponent } from './properties/properties.component';
 import { MortgageComponent } from './admin-panel/mortgage/mortgage.component';
 import { PaymentComponent } from './admin-panel/payment/payment.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
-import { MyQuestionsComponent } from './my-questions/my-questions.component';
-import { QuestionDetailsComponent } from './question-details/question-details.component';
-import { AddQuestionsComponent } from './add-questions/add-questions.component';
+// import { MyQuestionsComponent } from './my-questions/my-questions.component';
+// import { QuestionDetailsComponent } from './question-details/question-details.component';
+// import { AddQuestionsComponent } from './add-questions/add-questions.component';
 
 
 @NgModule({
@@ -48,9 +48,9 @@ import { AddQuestionsComponent } from './add-questions/add-questions.component';
     MortgageComponent,
     PaymentComponent,
     PropertyDetailsComponent,
-    MyQuestionsComponent,
-    QuestionDetailsComponent,
-    AddQuestionsComponent
+    // MyQuestionsComponent,
+    // QuestionDetailsComponent,
+    // AddQuestionsComponent
   ],
   imports: [
     BrowserModule,

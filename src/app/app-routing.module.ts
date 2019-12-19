@@ -14,9 +14,9 @@ import { MortgageComponent } from './admin-panel/mortgage/mortgage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
-import { MyQuestionsComponent } from './my-questions/my-questions.component';
-import { QuestionDetailsComponent } from './question-details/question-details.component';
-import { AddQuestionsComponent } from './add-questions/add-questions.component';
+// import { MyQuestionsComponent } from './my-questions/my-questions.component';
+// import { QuestionDetailsComponent } from './question-details/question-details.component';
+// import { AddQuestionsComponent } from './add-questions/add-questions.component';
 
 
 const routes: Routes = [
@@ -44,9 +44,9 @@ const routes: Routes = [
     {path:'forbiden', component:ForbidenComponent},
     {path:'dashboard', component:DashboardComponent},
     {path:'properties', component:PropertiesComponent},
-    {path:'addquestions', component:AddQuestionsComponent},
-    {path:'questions', component:MyQuestionsComponent},
-    {path:'questions/:id', component:QuestionDetailsComponent},
+    // {path:'addquestions', component:AddQuestionsComponent},
+    // {path:'questions', component:MyQuestionsComponent},
+    // {path:'questions/:id', component:QuestionDetailsComponent},
     {path:'properties/:id', component:PropertyDetailsComponent},
     {path:'admin', component:AdminPanelComponent, canActivate: [AuthGuard], data:{permittedRoles:['Admin']},
     children: [

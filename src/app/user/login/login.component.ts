@@ -39,6 +39,9 @@ export class LoginComponent implements OnInit {
         if(err.status == 400){
           this.toaster.error('Incorrect Username or Password.', 'Authentication Failed.');
         }
+        else if(err.status == 500){
+          this.toaster.error('Can not connect to the server with input data!!!')
+        }
         else{
           console.log(err);
         }

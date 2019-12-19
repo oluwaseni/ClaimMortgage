@@ -22,6 +22,10 @@ div.form-group label:first-child{
     margin-top: 10%;
 }
 
+.form-control{
+  width: 100% !important;
+}
+
 
 
 

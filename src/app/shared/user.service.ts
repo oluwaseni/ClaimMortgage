@@ -55,24 +55,8 @@ export class UserService {
 
 
    
-  postMortgages(){
-    var body= {
-      LandOwnerName: this.formModelProperty.value.LandOwnerName,
-      PropertyType: this.formModelProperty.value.PropertyType,
-      PercentageMortgaged: this.formModelProperty.value.PercentageMortgaged,
-      BankMortgaging: this.formModelProperty.value.BankMortgaging,
-      NatureOfDeeds: this.formModelProperty.value.NatureOfDeeds,
-      Registered: this.formModelProperty.value.Registered,
-      Volume: this.formModelProperty.value.Volume,
-      Number: this.formModelProperty.value.Number,
-      Page: this.formModelProperty.value.Page,
-      PlanNumber: this.formModelProperty.value.PlanNumber,
-      ReceiptNumber: this.formModelProperty.value.ReceiptNumber,
-      FileReference: this.formModelProperty.value.FileReference,
-      SerialNumber: this.formModelProperty.value.SerialNumber
-    };
-    // baseURI+'/PropertyMortgages',
-
+  postMortgages(body){
+   
     return this.http.post(this.baseURI+'/PropertyMortgages', body);
   }
 
