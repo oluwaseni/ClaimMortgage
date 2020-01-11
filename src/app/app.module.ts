@@ -25,6 +25,9 @@ import { PropertiesComponent } from './properties/properties.component';
 import { MortgageComponent } from './admin-panel/mortgage/mortgage.component';
 import { PaymentComponent } from './admin-panel/payment/payment.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
+import { AyoAboutComponent } from './Ayo/ayo-about/ayo-about.component';
+import { AyoIndexComponent } from './Ayo/ayo-index/ayo-index.component';
+import { AyoAkureMapComponent } from './Ayo/ayo-akure-map/ayo-akure-map.component';
 // import { MyQuestionsComponent } from './my-questions/my-questions.component';
 // import { QuestionDetailsComponent } from './question-details/question-details.component';
 // import { AddQuestionsComponent } from './add-questions/add-questions.component';
@@ -48,6 +51,9 @@ import { PropertyDetailsComponent } from './property-details/property-details.co
     MortgageComponent,
     PaymentComponent,
     PropertyDetailsComponent,
+    AyoAboutComponent,
+    AyoIndexComponent,
+    AyoAkureMapComponent,
     // MyQuestionsComponent,
     // QuestionDetailsComponent,
     // AddQuestionsComponent

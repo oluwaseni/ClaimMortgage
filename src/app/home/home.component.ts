@@ -65,4 +65,12 @@ export class HomeComponent implements OnInit {
     this.router.navigate(["home/about"])
   }
   
+  openIndex(){
+    this.router.navigate(["home/index"])
+  }
+  
+  openMap(){
+    this.router.navigate(["home/map"])
+  }
+  
   }

@@ -1,0 +1,211 @@
+<!-- <!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="http://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
+		
+        <script src="http://openlayers.org/en/v3.20.1/build/ol.js"></script>
+		<link rel="stylesheet" href="styles/websitestylemap.css" type="text/css">		
+		<script type="text/javascript" src="resources/jquery-1.7.2.js"></script>
+		<script type="text/javascript" src="resources/toogletab.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+	<title>LAND VERIFICATION AND MORTGAGE REGISTRATION SYSTEM</title>	
+	</head>
+	
+
+<body>
+<header BGCOLOR="BLUE"><marquee BGCOLOR="BLUE"><b>LAND VERIFICATION AND MORTGAGE REGISTRATION SYSTEM</b></marquee> 
+  
+</header>
+
+<script>
+function setActive() {
+  aObj = document.getElementById('navi').getElementsByTagName('a');
+  for(i=0;i<aObj.length;i++) { 
+    if(document.location.href.indexOf(aObj[i].href)>=0) {
+      aObj[i].className='active';
+    }
+  }
+}
+window.onload = setActive;
+
+
+</script> -->
+
+<nav id="navo">
+<ul id="navi">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="AkureMap.html">Verify Title</a></li>
+	<li><a href="About.html">About</a></li>
+</ul>
+</nav>
+
+<section>
+  <aside>
+    <table id="asidetable">
+     <tr>
+    <th> 
+			<div>
+					<ul class="nav2 nav2-tabs">
+						<li class="active">
+							<a href="#tab1">Land Parcels Info</a>
+						</li>
+						<li>
+							<a href="#tab2">Search for Land Parcel</a>
+						</li>
+						<li>
+							<a href="#tab3">Measure land parcel</a>
+						</li>
+					</ul>
+			</div>
+	</th>
+  
+  </tr>
+   	  
+  <tr style="text-align:center;">
+       <td>
+	   <div id="tab1" class="tab-content active">
+			<div id="info">
+				<div id="infohide">
+				<h3><br>
+  This is a prototype web site for verifying land ownership and registering mortgages on lands. <br> <br>
+  From this web, land registry can upload and update appropriate and necessary land information required by banks to perform their verification and mortgage registrations. Banks and other mortgaging institutions can confirm land information supplied by clients and further register the new mortgage with the land services after paying a token.<br><br>
+  Also users through the services tab can make request for land title verification.<br>
+  Staff can log in to a more detailed map.<br><br>
+  This web map page was built using OpenLayers API and JavaScript in order to visualize necessary land information on land parcels served as WMS.<br>
+   <br><a style="color:blue;"><b><i>most popular services</i></b></a><br>
+   <ul>
+  <li>Verifying of land title's authenticity</li><br>
+  <li>Checking and verifying the mortgage status of land </li>
+  <li>Registering new mortgage on land parcels </li>
+  <li>Updating mortgage status of land parcels </li>
+  </ul></h3>
+  </div>
+  </div>
+			
+		</div>
+		<div id="tab2" class="tab-content hide">
+			<div Style="padding-top: 50px; ">
+			<div style="background-color: blue; padding:5px;"><h4>SEARCH FOR LAND PARCEL BASED ON C of O No.</h4></div>
+				<div Style="text-align: left; padding-left: 20px;">
+				<br>
+						 <input type="checkbox" name="searchplot" value="PlotID" checked> <b>C of O No.</b><br><p></p>
+						 <input id = "titlecheckbox" type="checkbox" name="searchplot" value="Folio"><b>PLot ID</b><a style="color:red; text-decoration:none"> (not available)</a><br><p></p>
+						  <div class = "pull-left">
+							  <form onsubmit = "selectplot();return false">
+									<input id = "plotselect" type="text" placeholder="Search map.." name="search">
+							  </form>
+						  </div>
+						  <div>
+					<button id ="check-and-search" type="button" class="btn btn-info">
+					<span class="glyphicon glyphicon-search"></span> Search
+					</button>
+					</div>
+					<br>
+					<br>
+								<div id = "alerteds" class="alert2" style= "display:none">
+									<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+									<strong id= "rightid">&nbsp;</strong> &nbsp; is a valid Plot Id.<br> You can click on the parcel and go to 
+									"Map Info" Tab to view information on the property.
+								</div>
+								
+								<div id = "alertbo" class="alert" style= "display:none">
+									<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+									<strong id= "wrongid">&nbsp;</strong> &nbsp; is not a valid Plot Id.<br>Please Confirm<br>Also take note of Capital letters.
+														</div>
+							</div>
+				
+			</div>
+		</div>
+		
+		<div id="tab3" class="tab-content hide">
+		
+  <div class="measurtab">
+  <h3 style= "text-align: center;">Measuring</h3>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 style= "text-align:justify; color: black;">Measurement type</h3>
+    </div>
+    <form class="measuring-types">
+    
+        <div style="padding-left: 50px;">
+         
+            <input type="radio" name="measurement" value="Polygon" checked> Area
+         
+        </div >
+      
+     
+        <div style="padding-left: 50px;">
+          
+            <input type="radio" name="measurement" value="LineString"> Distance
+          
+        </div>
+      
+    </form>
+  </div>
+
+  <div style="text-align:center;">
+    <div class="panel-heading">
+      <h3 style= "text-align:center; color: blue;">Result</h3>
+    </div>
+    <div class="result-wrapper">
+      <samp id="js-result">n/a</samp>
+    </div>
+	<p></p>
+		<button class="btn btn-success" onclick="start()">Start measure</button>
+		
+		<button class="btn btn-danger" onclick="end()">Clear measure</button>
+  </div>
+</div>
+
+		</div></td>
+  </tr>
+  </table>
+ 
+		
+
+  </aside>
+  
+  <article>
+    <div id="map">
+	<div class="tree" id="layertree">
+	<b>Map Layers to get Info</b><br>
+
+		<b>Proprietor</b> &nbsp; <input type="checkbox" id="displayprop">
+		<a href="Staff.html" onclick="return confirm('Are You Staff?\nThis information require Staff Login\nGo to Login page?')" style= "color:blue" > (staff login)</a><br>
+		<b>parcel</b> &nbsp; <input type="checkbox" id="disparcel"  checked><br>
+	
+	</div>
+	 
+    </div>
+  </article>
+</section>
+<!--
+<script>
+var elements = document.getElementsByTagName("INPUT");
+for (var inp of elements) {
+    if (inp.type === "checkbox")
+        inp.checked = true;
+};
+
+</script>
+-->
+<!-- <footer>
+  <div id="mouse-position" style="float:left; font-size: 15px; padding-left: 100px;">
+  </div><div style="text-align: right; padding-right: 50px;"><a style = "color:white; text-decoration: none">© &nbsp; &nbsp; Akinse Ayo 2019</a></div>
+</footer>
+<script src="resources/layer.js"></script>
+<script>
+$("#displayprop").click(function() { return false; });
+$("#titlecheckbox").click(function() { return false; });
+</script>
+</body>
+</html> -->

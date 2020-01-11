@@ -1,0 +1,293 @@
+html, body {
+	background-color: white;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+header {
+	position: absolute;
+	top: 0;
+	/*width: 1200px;*/
+	/*width: 95%;*/
+	margin: auto;
+	height: 60px;
+	background-color: #DA541F;
+	padding-left: 30px;
+	padding-top: 10px;
+	text-align: left;
+	text-shadow: 0 0 3px black, 0 0 3px black;
+	font-size: 40px;
+	font-weight: bold;
+	border-style: solid;
+    border-width: 5px;
+	color: rgb(207, 158, 90);
+    left:0;
+	right:0;
+}
+
+nav {
+	position: absolute;
+	top: 80px;
+	height: 30px;
+	padding-top: 5px;
+	padding-left: 40px;
+	/*width: 95%;*/
+	/*width: 1240px;*/
+	margin: auto;
+	background-color: #0B0B09;
+	text-align: center;
+	left:0;
+	right:0;
+	}
+	
+ul#navi {
+	position: absolute;
+	/*top: 10px;*/
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding-left: 50px; 
+	}
+	ul#navi li {
+	float: left; 
+	}
+	ul#navi li a {
+	display: inline;
+	float: left;
+	/*padding: ;*/
+	margin-right: 50px;
+	background-color: none;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none; }
+	ul#navi li a:hover:not(.active) {
+	padding-top: 12px;
+	background-color: none; }
+	ul#navi li a.active {
+	/*padding-top: 15px;*/
+	background-color: none;
+	color: #CF9E5A;
+	font-size: 20px;
+	/*border: 1px solid #333;*/
+	border-top: none; 
+}
+	
+section {
+	position: absolute;
+	top: 115px;
+	/*width: 95%;*/
+	/*padding-left: 40px;
+	/*width: 1240px;*/
+	/*height: 35px;*/
+	/*padding: 5px;*/
+	bottom: 25px;
+	margin: auto;
+	background-color: #D3F0EC;
+	left:0;
+	right:0;
+}
+#seciframe{
+	background-color: #D3F0EC;
+	height: 100%;
+}
+
+aside {
+	position: absolute;
+	/*top: 20%;*/
+    right: 0;
+	left: 77%;
+	overflow: auto;
+	height: 100%;
+	/*bottom: 5%;*/
+    /*height: 500px; /* only for demonstration, should be removed */
+    background: #ffffff;
+   /* padding: 10px;*/
+}
+
+/* Style the list inside the menu */
+
+article {
+    position: absolute;
+	/*top: 20%;*/
+	right: 23%;
+	left: 0;
+	height: 100%;
+   /* padding: 20px;*/
+ /*   background-color: #f1f1f1;*/
+	/*	bottom: 5%;*/
+   /* height: 500px; /* only for demonstration, should be removed */
+}
+
+#asidetable {
+	width: 100%;
+	border: 5px;
+	/*text-align: center;*/
+}
+.infoelement {
+	height: 100%;
+}
+
+/* Clear floats after the columns */
+
+/* Style the footer */
+footer {
+	position: fixed;
+	bottom:0px;
+	left: 0;
+	right:0;
+	height: 25px;
+	background-color: #777;
+    text-align: center;
+	padding-bottom:0 px;
+	padding-top: 0px;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    aside, article {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* for the measuring tab in aside*/
+
+.ol-attribution > ul {
+  font-size: 2.3rem;
+}
+
+.measuretab {
+	text-align: left;
+}
+form {
+  padding: 2px 2px 0 2px;
+}
+
+.measuring-types {
+  padding-top: 0;
+}
+.panel-heading {
+	background-color: black;
+	width: 100%;
+	/*position: relative;
+	right: 5px;
+	left; 5px;*/
+	}
+.result-wrapper {
+  padding: 5px;
+  background-color: #9393FF;
+  font-family: Noto Sans, sans-serif;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 25px;
+  text-align: center;
+}
+
+/** Start: to style nav2igation tab **/
+			.nav2 {
+				list-style-type:none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				background-color: #CF9E5A;
+				text-align: center;
+			}
+
+			li {
+				float: left;
+			}
+
+			.nav2-tabs > li > a {
+				display: inline-block;
+				color: black;
+				font-weight: bold;
+				text-align: center;
+				padding: 9px 9px;
+				text-decoration: none;
+				font-size: 13px;
+				margin: 0;
+			}
+
+			.nav2-tabs > li > a:hover {
+				background-color: white;
+			}
+			.nav2-tabs{
+				  *zoom: 1;
+				}
+
+			.nav2-tabs:before,
+			.nav2-tabs:after {
+			  display: inline-block;
+			  content: "";
+			}
+
+			.nav2-tabs:after {
+			  clear: both;
+			}
+			.nav2-tabs > .active > a,
+			.nav2-tabs > .active > a:hover {
+			  color: #3D00D9;
+			  cursor: default;
+			  background-color: #ffffff;
+			  color: #000000;
+			  border: 1px solid #ddd;
+			  border-bottom-color: transparent;
+			  
+			}
+
+			.tab-content.active{
+				display: inline-block;
+
+              
+			}
+
+			.tab-content.hide{
+				display: none;
+			}
+
+
+			/** End: to style nav2igation tab **/
+			
+			/*iframe*/
+			iframe {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				}
+				
+	 /* FeatureInfo */
+ #infobox {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
+    border: 2px solid #DCDCD8;
+}
+#info, #info iframe {
+    background-color: blue;
+    border: 0.5px solid black;
+    border-radius: 1px;
+    padding: 0px;
+    font-family: cursive;
+	font-size: 10px;
+    height: auto;
+    width: 100%;
+}
+/* Layer tree */
+ #layertree {
+	position: absolute;
+    border: 2px solid #CF3A78;
+    padding: 10px;
+    margin: 3px;
+	text-align: justify;
+		}
+.tree {
+    font-size:10px;
+	text-align: justify;
+	width:150px;
+	list-style-type:none;
+	}

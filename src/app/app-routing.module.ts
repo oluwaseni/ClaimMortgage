@@ -14,6 +14,9 @@ import { MortgageComponent } from './admin-panel/mortgage/mortgage.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
+import { AyoAboutComponent } from './Ayo/ayo-about/ayo-about.component';
+import { AyoAkureMapComponent } from './Ayo/ayo-akure-map/ayo-akure-map.component';
+import { AyoIndexComponent } from './Ayo/ayo-index/ayo-index.component';
 // import { MyQuestionsComponent } from './my-questions/my-questions.component';
 // import { QuestionDetailsComponent } from './question-details/question-details.component';
 // import { AddQuestionsComponent } from './add-questions/add-questions.component';
@@ -38,11 +41,16 @@ const routes: Routes = [
       {path: 'login', component: LoginComponent}
     ]
 },
+
 {
+  
   path:'home', component:HomeComponent, canActivate: [AuthGuard], 
   children:[
     {path:'forbiden', component:ForbidenComponent},
     {path:'dashboard', component:DashboardComponent},
+    {path:'about', component:AyoAboutComponent},
+    {path:'map', component:AyoAkureMapComponent},
+    {path:'index', component:AyoIndexComponent},
     {path:'properties', component:PropertiesComponent},
     // {path:'addquestions', component:AddQuestionsComponent},
     // {path:'questions', component:MyQuestionsComponent},
